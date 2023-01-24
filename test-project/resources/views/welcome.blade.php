@@ -8,9 +8,10 @@
 </head>
 <body>
     <h1>Welcome Page</h1>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <a href="/register">Register</a>
+    <div>{{URL::full()}}</div>
+    <a href="{{URL::to('/about')}}">About</a>
+    <a href="{{URL::to('/contact')}}">Contact</a>
+    <a href="{{URL::to('/register')}}">Register</a>
     <a href="/user/{name}">User</a>
     <a href="/hello">Hello</a>
 </body>

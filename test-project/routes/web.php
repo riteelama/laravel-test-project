@@ -14,12 +14,8 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
-    return redirect('about');
+    return view('welcome');
 });
 
 Route::get('/hello', function () {
@@ -32,19 +28,8 @@ Route::view("about","/about");
 
 Route::view("register","/register");
 
-Route::get('/user/{name}',function($name){
-    echo $name;
-    return view('user', ['name'=>$name]);
-});
+// Route::post("users",[UserController::class,'getData']);
 
-// Route::get("user/{id}",[UserController::class,'show']);
+Route::view("users","users");
 
-// Route::view('users',"/users");
-
-// Route::view('about-with-header',"/about-with-header");
-
-// Route::get('/users/{name}',function($name) {
-//     return view('users',['name'=>$name]);
-// });
-
-Route::get("users/{name}",[UserController::class,"showName"]);
+Route::view('no-access','no-access');

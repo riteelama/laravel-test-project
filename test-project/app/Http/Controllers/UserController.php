@@ -11,7 +11,12 @@ class UserController extends Controller
     // {
     //     return ($id);
     // }
-        function showName($name) {
-            return view('users',['name'=>$name]);
-        }
+    // function showName($name) {
+    // //     return view('users',['name'=>$name]);
+    // // }// 
+
+    // function getData(Request $req)
+    // {
+    //     return $req->input();
+    // }
 }
