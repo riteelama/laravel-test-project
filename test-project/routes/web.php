@@ -38,6 +38,8 @@ Route::view('noaccess','noaccess');
 
 Route::view('home','home');
 
-Route::group(['middleware'=>['protectPage']],function() {
-    Route::view('users','users');
-});
+// Route::group(['middleware'=>['protectPage']],function() {
+//     Route::view('users','users');
+// });
+
+Route::view('users','users')->middleware('protectPage');
