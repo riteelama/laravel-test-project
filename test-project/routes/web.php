@@ -33,3 +33,11 @@ Route::view("register","/register");
 Route::view("users","users");
 
 Route::view('no-access','no-access');
+
+Route::view('noaccess','noaccess');
+
+Route::view('home','home');
+
+Route::group(['middleware'=>['protectPage']],function() {
+    Route::view('users','users');
+});
